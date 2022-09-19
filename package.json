@@ -1,5 +1,5 @@
 {
-  "name": "react-native-mentions",
+  "name": "rn-mentions",
   "version": "1.1.4",
   "description": "Mentions textbox for React Native. Works on both ios and android",
   "main": "index.js",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/harshq/react-native-mentions/issues"
   },
-  "homepage": "https://github.com/harshq/react-native-mentions#readme"
+  "homepage": "https://github.com/harshq/react-native-mentions#readme",
+  "dependencies": {
+    "deprecated-react-native-prop-types": "^2.3.0"
+  }
 }

@@ -8,14 +8,14 @@ Mentions textbox for React Native. Works on both ios and android.
 
 ## Installation
 
-```yarn add react-native-mentions```
+```yarn add rn-mentions```
 or
-```npm install --save react-native-mentions```
+```npm install --save rn-mentions```
 
 ## Usage
 
 ```js
-import MentionsTextInput from 'react-native-mentions';
+import MentionsTextInput from 'rn-mentions';
 
   <MentionsTextInput
     textInputStyle={{ borderColor: '#ebebeb', borderWidth: 1, padding: 5, fontSize: 15 }}
