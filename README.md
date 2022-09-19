@@ -1,4 +1,4 @@
-# rn-mentions [![npm version](https://badge.fury.io/js/react-native-mentions.svg)](https://badge.fury.io/js/react-native-mentions)
+# rn-mentions
 Mentions textbox for React Native. Works on both ios and android. 
 
 ## Important
