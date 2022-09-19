@@ -1,5 +1,8 @@
-# react-native-mentions [![npm version](https://badge.fury.io/js/react-native-mentions.svg)](https://badge.fury.io/js/react-native-mentions)
+# rn-mentions [![npm version](https://badge.fury.io/js/react-native-mentions.svg)](https://badge.fury.io/js/react-native-mentions)
 Mentions textbox for React Native. Works on both ios and android. 
+
+## Important
+This package is forked from [react-native-mentions](https://www.npmjs.com/package/react-native-mentions) but with the fixes of ViewPropType errors which I have already faced in latest [react-native](https://reactnative.dev/) version.
 
 ## Demo
 
