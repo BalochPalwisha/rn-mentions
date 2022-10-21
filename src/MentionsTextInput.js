@@ -8,7 +8,8 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { TextInputPropTypes, ViewPropTypes } from 'deprecated-react-native-prop-types';
-import { FormattedText } from 'react-native-formatted-text';
+import FormattedText from 'rn-mentions/src/FormattedText';
+
 
 export default class MentionsTextInput extends Component {
   constructor() {
@@ -118,41 +119,8 @@ export default class MentionsTextInput extends Component {
             renderItem={(rowData) => { return this.props.renderSuggestionsRow(rowData, this.stopTracking.bind(this)) }}
           />
         </Animated.View>
-         {Platform.OS == 'android' ?
         <TextInput
-          onContentSizeChange={(event) => {
-            this.setState({
-              textInputHeight: this.props.textInputMinHeight >= event.nativeEvent.contentSize.height ? this.props.textInputMinHeight : event.nativeEvent.contentSize.height + 10,
-            });
-          }}
-         
-          ref={component => this._textInput = component}
-          onChangeText={this.onChangeText.bind(this)}
-          multiline={true}
-          style={[{ ...this.props.textInputStyle }, { height: Math.min(this.props.textInputMaxHeight, this.state.textInputHeight) }]}
-          placeholder={this.props.placeholder ? this.props.placeholder : 'Write a comment...'}
-        >
-            <FormattedText
-              onContentSizeChange={(event) => {
-                this.setState({
-                  textInputHeight: this.props.textInputMinHeight >= event.nativeEvent.contentSize.height ? this.props.textInputMinHeight : event.nativeEvent.contentSize.height + 10,
-                });
-              }}
-              matches={
-               this.props.taggingPeoples.map(element => {
-                  return ({
-                    text: element.Name, 
-                    style: { color: '#01669D' }
-
-                  })})}
-                >
-              {this.props.val}
-            </FormattedText>
-          
-          
-           </TextInput> :
-           
-           <TextInput
+           //{...this.props}
            onContentSizeChange={(event) => {
              this.setState({
                textInputHeight: this.props.textInputMinHeight >= event.nativeEvent.contentSize.height ? this.props.textInputMinHeight : event.nativeEvent.contentSize.height + 10,
@@ -167,25 +135,17 @@ export default class MentionsTextInput extends Component {
            placeholder={this.props.placeholder ? this.props.placeholder : 'Write a comment...'}
          >
              <FormattedText
-               onContentSizeChange={(event) => {
-                 this.setState({
-                   textInputHeight: this.props.textInputMinHeight >= event.nativeEvent.contentSize.height ? this.props.textInputMinHeight : event.nativeEvent.contentSize.height + 10,
-                 });
-               }}
                matches={
                 this.props.taggingPeoples.map(element => {
                    return ({
                      text: element.Name, 
-                     style: { color: 'dodgerblue' }
+                     style: { color: '#01669D' }
  
                    })})}
                  >
-               {this.props.val}
+               {this.props.value}
              </FormattedText>
-           
-           
             </TextInput>
-           }
       </View>
     )
   }

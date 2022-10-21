@@ -1,2 +1,6 @@
 import MentionsTextInput from './src/MentionsTextInput';
-export default MentionsTextInput;
+import FormattedText from './src/FormattedText';
+export  {
+    MentionsTextInput,
+    FormattedText
+}
